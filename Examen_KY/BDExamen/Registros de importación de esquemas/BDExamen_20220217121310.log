@@ -1,0 +1,87 @@
+16/02/2022 19:13:10	Este registro contiene información acerca de la operación de importación de esquema en el proyecto 'BDExamen' del equipo 'DESKTOP-V66ML6S' por el usuario 'Fernando'.
+16/02/2022 19:13:11	Se inició la importación del esquema de la base de datos.
+16/02/2022 19:13:11	Recopilando credenciales de la base de datos
+16/02/2022 19:13:11	Recopilando opciones de base de datos
+16/02/2022 19:13:11	Recopilando la opción de configuración de ámbito de la base de datos genérica
+16/02/2022 19:13:11	Recopilando usuarios
+16/02/2022 19:13:11	Recopilando roles
+16/02/2022 19:13:11	Recopilando roles de aplicación
+16/02/2022 19:13:11	Recopilando pertenencias a roles
+16/02/2022 19:13:11	Recopilando grupos de archivos
+16/02/2022 19:13:11	Recopilando catálogos de texto completo
+16/02/2022 19:13:11	Recopilando ensamblados
+16/02/2022 19:13:11	Recopilando certificados
+16/02/2022 19:13:11	Recopilando claves asimétricas
+16/02/2022 19:13:11	Recopilando claves simétricas
+16/02/2022 19:13:11	Recopilando claves simétricas cifradas
+16/02/2022 19:13:11	Recopilando esquemas
+16/02/2022 19:13:11	Recopilando colecciones de esquemas XML
+16/02/2022 19:13:11	Recopilando tipos de datos definidos por el usuario
+16/02/2022 19:13:11	Recopilando tipos definidos por el usuario
+16/02/2022 19:13:11	Recopilando tipos de tabla
+16/02/2022 19:13:11	Recopilando claves únicas para tipos de tabla
+16/02/2022 19:13:11	Recopilando claves principales para tipos de tabla
+16/02/2022 19:13:11	Recopilando índices para tipos de tablas
+16/02/2022 19:13:11	Recopilando restricciones CHECK para tipos de tabla
+16/02/2022 19:13:11	Recopilando restricciones DEFAULT para tipos de tabla
+16/02/2022 19:13:11	Recopilando funciones de partición
+16/02/2022 19:13:11	Recopilando esquemas de partición
+16/02/2022 19:13:11	Recopilando funciones
+16/02/2022 19:13:11	Recopilando funciones cifradas
+16/02/2022 19:13:11	Recopilando agregados
+16/02/2022 19:13:11	Recopilando procedimientos
+16/02/2022 19:13:11	Recopilando procedimientos cifrados
+16/02/2022 19:13:11	Recopilando tablas
+16/02/2022 19:13:11	Recopilando claves principales
+16/02/2022 19:13:12	Recopilando restricciones UNIQUE
+16/02/2022 19:13:12	Recopilando claves externas
+16/02/2022 19:13:12	Recopilando restricciones DEFAULT
+16/02/2022 19:13:12	Recopilando restricciones CHECK
+16/02/2022 19:13:12	Recopilando vistas
+16/02/2022 19:13:12	Recopilando vistas cifradas
+16/02/2022 19:13:12	Recopilando índices
+16/02/2022 19:13:12	Recopilando estadísticas
+16/02/2022 19:13:12	Recopilando listas de palabras irrelevantes de índices de texto completo
+16/02/2022 19:13:12	Recopilando listas de propiedades de búsqueda
+16/02/2022 19:13:12	Recopilando propiedades de búsqueda
+16/02/2022 19:13:12	Recopilando índices de texto completo
+16/02/2022 19:13:12	Recopilando índices de almacenamiento de columnas
+16/02/2022 19:13:12	Recopilando índices espaciales
+16/02/2022 19:13:12	Recopilando índices XML
+16/02/2022 19:13:12	Recopilando índices XML selectivos
+16/02/2022 19:13:12	Recopilando desencadenadores cifrados
+16/02/2022 19:13:12	Recopilando desencadenadores
+16/02/2022 19:13:12	Recopilando DDL triggers cifrados y de CLR
+16/02/2022 19:13:12	Recopilando DDL triggers
+16/02/2022 19:13:12	Creación de la restricción perimetral en curso
+16/02/2022 19:13:12	Recopilando sinónimos
+16/02/2022 19:13:12	Recopilando valores predeterminados
+16/02/2022 19:13:12	Recopilando enlaces UDDT de restricción de datos
+16/02/2022 19:13:12	Recopilando reglas
+16/02/2022 19:13:12	Recopilando enlaces UDDT de restricción de datos
+16/02/2022 19:13:12	Recopilando tipos de mensaje
+16/02/2022 19:13:12	Recopilando colas
+16/02/2022 19:13:12	Recopilando contratos
+16/02/2022 19:13:12	Recopilando servicios
+16/02/2022 19:13:12	Recopilando notificaciones de eventos
+16/02/2022 19:13:12	Recopilando enlaces de servicio remoto
+16/02/2022 19:13:12	Recopilando prioridades de Broker
+16/02/2022 19:13:12	Recopilando firmas
+16/02/2022 19:13:12	Recopilando opciones de compresión de datos
+16/02/2022 19:13:12	Recopilando tipos de secuencia
+16/02/2022 19:13:12	Recopilando directivas de seguridad
+16/02/2022 19:13:12	Recopilar claves de cifrado de columna
+16/02/2022 19:13:12	Recopilando claves maestras de columna
+16/02/2022 19:13:12	Recopilando orígenes de datos externos
+16/02/2022 19:13:12	Recopilando formatos de archivo externos
+16/02/2022 19:13:12	Recopilando tablas externas
+16/02/2022 19:13:12	Recopilando propiedades extendidas
+16/02/2022 19:13:12	Recopilando ensamblados
+16/02/2022 19:13:12	Recopilando credenciales
+16/02/2022 19:13:12	Recopilando inicios de sesión
+16/02/2022 19:13:12	Recopilando auditorías de servidor
+16/02/2022 19:13:12	Buscando elementos duplicados en el proyecto
+16/02/2022 19:13:12	Ha finalizado el procesamiento de los elementos duplicados
+16/02/2022 19:13:13	Finalizó la importación de la base de datos.
+16/02/2022 19:13:13	Se guardó un resumen de la importación en la siguiente ubicación: C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\Registros de importación de esquemas\BDExamen_20220217121310.log
+16/02/2022 19:13:13	Haga clic en Finalizar para continuar...

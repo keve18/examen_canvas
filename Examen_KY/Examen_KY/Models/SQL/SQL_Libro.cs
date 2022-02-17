@@ -16,6 +16,7 @@
         /// </summary>
         public const string SP_DEL_LIBRO = "Del_Libro";
         #endregion
+
         #region Nombres de Parametros
         /// <summary>
         /// Constante de parametro de id Libro
@@ -31,6 +32,16 @@
         /// Constante de parametro de descripcion Libro
         /// </summary>
         public const string PARAM_LIBRO_DESCRIPCION = "@DesLibro";
+
+        /// <summary>
+        /// Constante de parametro de Autor
+        /// </summary>
+        public const string PARAM_LIBRO_AUTOR_ID = "@IdAutor";
+
+        /// <summary>
+        /// Constante de parametro de nombre Autor
+        /// </summary>
+        public const string PARAM_LIBRO_NOMBRE_AUTOR = "@Autor";
         #endregion
     }
 }

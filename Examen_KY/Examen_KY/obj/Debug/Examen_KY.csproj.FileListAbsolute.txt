@@ -31,6 +31,7 @@ C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\Antlr3.Runtime.d
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\Newtonsoft.Json.dll
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\Swashbuckle.Core.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Net.Http.Formatting.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Web.Cors.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Web.Helpers.dll
@@ -43,6 +44,7 @@ C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Web.Razor
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Web.WebPages.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Web.WebPages.Razor.dll
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\WebActivatorEx.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\WebGrease.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\System.Web.Http.Cors.xml
@@ -68,6 +70,7 @@ C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\es\System.Web.Ra
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\obj\Debug\Examen_KY.csproj.AssemblyReference.cache
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\obj\Debug\Examen_KY.csproj.CoreCompileInputs.cache
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\obj\Debug\Examen_KY.csproj.CopyComplete
 C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\Examen_KY\obj\Debug\Examen_KY.dll

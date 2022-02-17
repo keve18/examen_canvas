@@ -1,0 +1,10 @@
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\bin\Debug\BDExamen.dacpac
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\bin\Debug\BDExamen.dll
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\bin\Debug\BDExamen.pdb
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\BDExamen.sqlproj.AssemblyReference.cache
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\Model.xml
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\refactor.xml
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\postdeploy.sql
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\predeploy.sql
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\BDExamen.dll
+C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\BDExamen.pdb

@@ -15,7 +15,7 @@ namespace Examen_KY.Models.Persistence
         /// </summary>
         public P_ConnectionString()
         {
-            this.ConnectionString = WebConfigurationManager.ConnectionStrings["Examen_Canva"].ConnectionString;
+            this.ConnectionString = WebConfigurationManager.ConnectionStrings["BDCanva"].ConnectionString;
         }
 
         /// <summary>

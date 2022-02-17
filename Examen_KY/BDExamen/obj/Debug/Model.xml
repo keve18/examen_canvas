@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="BDExamen.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\FERNANDO\DESKTOP\EXAMEN_CANVAS\EXAMEN_KY\BDEXAMEN\OBJ\DEBUG\BDEXAMEN.DLL" />
+			<Metadata Name="AssemblyName" Value="BDExamen" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Fernando\Desktop\Examen_Canvas\Examen_KY\BDExamen\obj\Debug\BDExamen.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1253_CI_AI" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[keve]" Disambiguator="6" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_owner]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[keve]" Disambiguator="6" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_datareader]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[keve]" Disambiguator="6" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_datawriter]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Autor]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Autor].[IdAutor]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Autor].[Nombres]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Autor].[Apellidos]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Del_Autor]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	DELETE Autor WHERE IdAutor=@IdAutor
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Autor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Del_Autor].[@IdAutor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Del_Autor].[@IdAutor]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="50" />
+				<Property Name="Length" Value="152" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Del_Autor] @IdAutor='1'&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Del_Autor]&#xD;&#xA;@IdAutor INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Del_Editorial]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	DELETE Editorial WHERE IdEditorial=@IdEditorial
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Editorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial].[IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Del_Editorial].[@IdEditorial]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Del_Editorial].[@IdEditorial]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="58" />
+				<Property Name="Length" Value="180" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Del_Editorial] @IdEditorial='1'&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Del_Editorial]&#xD;&#xA;@IdEditorial INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Del_Libro]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	DELETE Libro WHERE IdLibro=@IdLibro
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdLibro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Del_Libro].[@IdLibro]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Del_Libro].[@IdLibro]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="50" />
+				<Property Name="Length" Value="152" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Del_Libro] @IdLibro='1'&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Del_Libro]&#xD;&#xA;@IdLibro INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Editorial]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Editorial].[IdEditorial]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Editorial].[NomEditorial]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Get_Autor]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT		*
+	FROM		Autor
+	WHERE		(( @IdAutor IS NOT NULL AND IdAutor = @IdAutor ) OR
+				( @IdAutor IS NULL AND IdAutor IS NOT NULL))
+				AND
+				(( @Nombres IS NOT NULL AND Nombres = @Nombres ) OR
+				( @Nombres IS NULL AND Nombres IS NOT NULL))
+				AND
+				(( @Apellidos IS NOT NULL AND Apellidos = @Apellidos ) OR
+				( @Apellidos IS NULL AND Apellidos IS NOT NULL))
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Autor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Autor].[@IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Autor].[@Nombres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[Nombres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Autor].[@Apellidos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[Apellidos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Autor].[@IdAutor]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Autor].[@Nombres]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Autor].[@Apellidos]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="81" />
+				<Property Name="Length" Value="581" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Get_Autor] @IdAutor=NULL,@Nombres=NULL,@Apellidos=NULL&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Get_Autor]&#xD;&#xA;@IdAutor INT = NULL,&#xD;&#xA;@Nombres VARCHAR(250),&#xD;&#xA;@Apellidos VARCHAR(250)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Get_Editorial]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT		*
+	FROM		Editorial
+	WHERE		(( @IdEditorial IS NOT NULL AND IdEditorial = @IdEditorial ) OR
+				( @IdEditorial IS NULL AND IdEditorial IS NOT NULL))
+				AND
+				(( @Nombre IS NOT NULL AND NomEditorial = @Nombre ) OR
+				( @Nombre IS NULL AND NomEditorial IS NOT NULL))
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Editorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Editorial].[@IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial].[IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Editorial].[@Nombre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial].[NomEditorial]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Editorial].[@IdEditorial]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Editorial].[@Nombre]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="81" />
+				<Property Name="Length" Value="466" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Get_Editorial] @IdEditorial= NULL, @Nombre= 'PRUEBA 1'&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Get_Editorial]&#xD;&#xA;@IdEditorial INT = NULL,&#xD;&#xA;@Nombre VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Get_Libro]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SELECT		L.IdLibro,L.Nombre_Libro,L.Desc_Libro,(A.Nombres +' '+A.Apellidos) AS Autor,E.NomEditorial
+	FROM		Libro L
+	INNER JOIN	Autor A
+	ON			A.IdAutor=L.IdAutor
+	INNER JOIN	Editorial E
+	ON			E.IdEditorial=L.IdEditorial
+	WHERE		( @IdLibro IS NOT NULL AND l.IdLibro = @IdLibro ) OR
+				( @IdLibro IS NULL AND l.IdLibro IS NOT NULL)
+				AND
+				( @Nombre_Libro IS NOT NULL AND l.Nombre_Libro = @Nombre_Libro ) OR
+				( @Nombre_Libro IS NULL AND l.Nombre_Libro IS NOT NULL)
+				AND
+				( @Autor IS NOT NULL AND A.Nombres = @Autor ) OR
+				( @Autor IS NULL AND A.Nombres IS NOT NULL)
+				AND
+				( @Autor IS NOT NULL AND A.Apellidos = @Autor ) OR
+				( @Autor IS NULL AND A.Apellidos IS NOT NULL)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial].[IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdLibro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[Nombre_Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[Desc_Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[Nombres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[Apellidos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial].[NomEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Libro].[@IdLibro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdLibro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Libro].[@Nombre_Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[Nombre_Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Get_Libro].[@Autor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Libro].[@IdLibro]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[NULL]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Libro].[@Nombre_Libro]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Get_Libro].[@Autor]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="83" />
+				<Property Name="Length" Value="914" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Get_Libro] @IdLibro= NULL,@Nombre_Libro=NULL,@Autor=NULL&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Get_Libro]&#xD;&#xA;@IdLibro INT = NULL,&#xD;&#xA;@Nombre_Libro VARCHAR(100),&#xD;&#xA;@Autor VARCHAR(250)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Ins_Autor]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	IF(@IdAutor = 0)
+	BEGIN
+		INSERT INTO Autor(Nombres,Apellidos) VALUES(UPPER(@Nombres),UPPER(@Apellidos))
+	END
+	ELSE
+		UPDATE Autor SET Nombres=UPPER(@Nombres),Apellidos=UPPER(@Apellidos) WHERE IdAutor=@IdAutor
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Ins_Autor].[@IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[Nombres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[Apellidos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Ins_Autor].[@Nombres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Ins_Autor].[@Apellidos]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Autor].[IdAutor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Autor].[@IdAutor]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Autor].[@Nombres]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Autor].[@Apellidos]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="85" />
+				<Property Name="Length" Value="417" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Ins_Autor] @IdAutor='0',@Nombres='jose',@Apellidos='perez'&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Ins_Autor]&#xD;&#xA;@IdAutor INT,&#xD;&#xA;@Nombres NVARCHAR(250),&#xD;&#xA;@Apellidos VARCHAR(250)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Ins_Editorial]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	IF(@IdEditorial = 0)
+	BEGIN
+		INSERT INTO Editorial(NomEditorial) VALUES(UPPER(@NomEditorial))
+	END
+	ELSE
+		UPDATE Editorial SET NomEditorial=@NomEditorial WHERE IdEditorial=@IdEditorial
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Ins_Editorial].[@IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial].[NomEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Ins_Editorial].[@NomEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Editorial].[IdEditorial]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Editorial].[@IdEditorial]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Editorial].[@NomEditorial]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="83" />
+				<Property Name="Length" Value="378" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Ins_Editorial] @IdEditorial='0',@NomEditorial='prueba 1'&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Ins_Editorial]&#xD;&#xA;@IdEditorial INT,&#xD;&#xA;@NomEditorial NVARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[Ins_Libro]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	IF(@IdLibro = 0)
+	BEGIN
+		INSERT INTO Libro(Nombre_Libro,Desc_Libro,IdAutor,IdEditorial) VALUES(UPPER(@NomLibro),UPPER(@DesLibro),@IdAutor,@IdEditorial)
+	END
+	ELSE
+		UPDATE Libro SET Nombre_Libro=UPPER(@NomLibro),Desc_Libro=UPPER(@DesLibro),IdAutor=@IdAutor,IdEditorial=@IdEditorial WHERE IdLibro=@IdLibro
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Ins_Libro].[@IdLibro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[Nombre_Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[Desc_Libro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Ins_Libro].[@NomLibro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Ins_Libro].[@DesLibro]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Ins_Libro].[@IdAutor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Ins_Libro].[@IdEditorial]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Libro].[IdLibro]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Libro].[@IdLibro]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Libro].[@NomLibro]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Libro].[@DesLibro]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Libro].[@IdAutor]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[Ins_Libro].[@IdEditorial]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="109" />
+				<Property Name="Length" Value="571" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="/*&#xD;&#xA;&#x9;EXEC [dbo].[Ins_Libro] @IdLibro='0',@NomLibro='Libro01',@DesLibro='',@IdAutor=1,@IdEditorial=1&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[Ins_Libro]&#xD;&#xA;@IdLibro INT,&#xD;&#xA;@NomLibro NVARCHAR(100),&#xD;&#xA;@DesLibro VARCHAR(150),&#xD;&#xA;@IdAutor INT,&#xD;&#xA;@IdEditorial INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Libro]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Libro].[IdLibro]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Libro].[Nombre_Libro]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Libro].[Desc_Libro]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="150" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Libro].[IdAutor]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Libro].[IdEditorial]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Autores]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Autor].[IdAutor]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Autor]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Editorial]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Editorial].[IdEditorial]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Editorial]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Libro]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Libro].[IdLibro]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Libro].[IdAutor]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Libro].[IdEditorial]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Libro]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="9" />
+		</Element>
+		<Element Type="SqlLogin" Name="[keve]">
+			<Property Name="Password" Value=";vQyU8q{?|jrckfcax0okshVmsFT7_&amp;#$!~&lt;{gm;mvx~nwtl" />
+			<Property Name="DefaultLanguage" Value="us_english" />
+			<Property Name="Sid" Value="0xA8DD6A46D04C3F459B445EF1222D40B2" />
+			<Property Name="IsCheckPolicyOn" Value="False" />
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlUser" Name="[keve]" Disambiguator="6">
+			<Property Name="LoginIdentifierScript">
+				<Value><![CDATA[[keve]]]></Value>
+			</Property>
+			<Property Name="AuthenticationType" Value="1" />
+			<Relationship Name="Login">
+				<Entry>
+					<References Name="[keve]" />
+				</Entry>
+			</Relationship>
+		</Element>
+	</Model>
+</DataSchemaModel>

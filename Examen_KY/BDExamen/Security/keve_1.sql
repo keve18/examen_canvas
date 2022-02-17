@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [keve]
+    WITH PASSWORD = N';vQyU8q{?|jrckfcax0okshVmsFT7_&#$!~<{gm;mvx~nwtl', SID = 0xA8DD6A46D04C3F459B445EF1222D40B2, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
